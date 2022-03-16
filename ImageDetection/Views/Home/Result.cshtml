@@ -1,0 +1,22 @@
+﻿@model List<string>;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Result</h1>
+@if (Model.Count > 0)
+{
+    <p>List of detected objects:</p>
+    <ol>
+
+        @foreach (string label in Model)
+        {
+        <li>@label</li>
+        }
+    </ol>
+    <br>
+}
+else
+{
+<p>No object is detected.</p>
+}

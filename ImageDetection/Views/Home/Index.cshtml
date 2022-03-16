@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Image Recognition</h1>
+    <form asp-controller="Home" asp-action="UploadImage" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend> Upload Image </legend>
+            <label for="Image">Image</label>
+            <input type="file" name="Image" />
+            <br />
+            <input type="submit" value="Upload" />
+        </fieldset>
+    </form>
+</div>

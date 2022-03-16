@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageDetection", "ImageDetection\ImageDetection.csproj", "{0AF2B825-FFB6-4D0A-968A-44C7A8A14902}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yolov5Net.Scorer", "Yolov5Net.Scorer\Yolov5Net.Scorer.csproj", "{608438AA-6373-40E7-84D8-78B860EFB1D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageRecognitionService", "ImageRecognitionService\ImageRecognitionService.csproj", "{BC473E85-AD50-4588-8B86-E463AF90CA3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0AF2B825-FFB6-4D0A-968A-44C7A8A14902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AF2B825-FFB6-4D0A-968A-44C7A8A14902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AF2B825-FFB6-4D0A-968A-44C7A8A14902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AF2B825-FFB6-4D0A-968A-44C7A8A14902}.Release|Any CPU.Build.0 = Release|Any CPU
+		{608438AA-6373-40E7-84D8-78B860EFB1D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{608438AA-6373-40E7-84D8-78B860EFB1D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{608438AA-6373-40E7-84D8-78B860EFB1D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{608438AA-6373-40E7-84D8-78B860EFB1D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC473E85-AD50-4588-8B86-E463AF90CA3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC473E85-AD50-4588-8B86-E463AF90CA3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC473E85-AD50-4588-8B86-E463AF90CA3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC473E85-AD50-4588-8B86-E463AF90CA3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8BD2F15-8E38-4223-AA9D-FFC624A0720E}
+	EndGlobalSection
+EndGlobal
