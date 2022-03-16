@@ -43,7 +43,8 @@ namespace ImageDetection.Controllers
         [HttpPost]
         public async Task<IActionResult> UploadImage(IFormFile Image,string ModelType= "yolov5n.onnx")
         {
-            string FilePath = Path.Combine(_env.WebRootPath + "/DataSource//imagesResult//" + Guid.NewGuid());
+            string unFolderId = Guid.NewGuid().ToString();
+            string FilePath = Path.Combine(_env.WebRootPath + "/DataSource//imagesResult//" + unFolderId);
             if(!Directory.Exists(FilePath))
             Directory.CreateDirectory(FilePath+"/input");
             using (var fileStream = new FileStream(FilePath+ "/input/" + Image.FileName, FileMode.Create))
@@ -54,7 +55,7 @@ namespace ImageDetection.Controllers
            var result = ImageService.RecognizeImage(FilePath, Image.FileName, ModelPath);
             if(result.success ==101)
             {
-                return RedirectToAction("Result", new { lables = string.Join(",", result.Lables) });
+                return RedirectToAction("Result", new { lables = string.Join(",", result.Lables),fileName = Image.FileName,unFolderid= unFolderId });
             }
                 /*string path = Path.Combine(FilePath, "output/") + Image.FileName;
                 byte[] bytes = System.IO.File.ReadAllBytes(path);
@@ -69,9 +70,10 @@ namespace ImageDetection.Controllers
                 return Json("Some error occurs while processing the image.");
             }
         }
-        public IActionResult Result(string lables)
+        public IActionResult Result(string lables, string fileName,string unFolderid)
         {
-            return View(lables.Split(',').ToList());
+            ImageOutputResult imageOutputResult = new ImageOutputResult { fileName = fileName, labels= lables.Split(',').ToList(),unFolderId=unFolderid };
+            return View(imageOutputResult);
 
         }
         [HttpGet]
